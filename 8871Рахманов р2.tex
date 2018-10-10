@@ -1,0 +1,44 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian] {babel}
+\usepackage{tikz}
+\usepackage[european,cuteinductors, smartlabels]{circuitikz}
+\title{Практическая работа 2}
+
+\author{студент Рахманов Максим Алексеевич}
+
+% Start the document
+\begin{document}
+\maketitle
+\begin{tikzpicture} [scale=0.6]
+\newcommand{\alfa } {30}
+\newcommand{\teta } {130}
+\newcommand {\D } {5}
+\newcommand {\V } {3.24}
+
+\draw[thin,->,>=stealth'] (0,0) -- (9,0) node[below] {$X_1$};
+\draw[thin,->,>=stealth'] (0,0) -- ({9*cos(\teta) },{9*sin(\teta) }) node[left] {$X_2$};
+\draw[thin,->,>=stealth'] (0,0) -- ({\D*cos(\alfa) },{\D*sin(\alfa) }) node[at end, above right] {$\vec{x}$};
+\draw[thin,dashed]  ({\D*cos(\alfa) },{\D*sin(\alfa) }) -- ({\D*cos(\alfa) },0)node[at end,below] {$x_1$};
+\draw[thin]({\D*cos(\alfa) },{\D*sin(\alfa) }) -- 
+(6.41,0) node[at end,below] {$x^1$};
+\draw[thin]({\D*cos(\alfa) },{\D*sin(\alfa) }) -- 
+({\V*cos(\teta) },{\D*sin(\alfa) }) node[at end,below] {$x^2$};
+\draw[thin,dashed] (0,0) -- ({\V*cos(50) },{\V*sin(-50) });
+\draw[thin,dashed] (0,0) -- (-\V ,0);
+\draw[thin,dashed]({\D*cos(\alfa) },{\D*sin(\alfa) }) --++ 
+({4.95*cos(-140) },{4.95*sin(-140) }) node[at end,below] {$x_2$};
+\draw[thin,->,>=stealth'] (0,0) --++ ({1*cos(\teta) },{1*sin(\teta) }) node[left] {$\vec{e_2}$};
+\draw[thin] ({1*cos(\teta ) },{1*sin(\teta ) }) -- (0,{1/cos(40)});
+\draw[thin,->,>=stealth'] (0,0) --++ (0,{1/cos(40)}) node[above left] {$\vec{e^2}$};
+\draw[thin,->,>=stealth'] (0,0) -- (1,0) node[below right] {$\vec{e_1}$};
+\draw[thin,dashed] (0,0) -- (0,\D );
+\draw[thin,dashed] (0,0) -- ({\D*cos(40) },{\D*sin(40) });
+\draw[thin,->,>=stealth'] (0,0) -- (1,{1*cos(33) });
+\draw[thin] (1,{1*cos(33) }) -- (1,0) node[at start,above] {$\vec{e^1}$};
+\draw[thin,<->] (1.5,0) arc(0:30:1.5) node[midway,right] {$\alpha=30^\circ$};
+\draw[thin,<->] (8,0) arc(0:130:8) node[midway,right,above right] {$\Theta=130^\circ$};
+
+\end{tikzpicture}
+\end{document}
