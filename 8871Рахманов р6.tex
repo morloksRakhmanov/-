@@ -1,0 +1,127 @@
+\documentclass[a4paper,12pt]{scrartcl}
+\usepackage{mathtext}                   
+\usepackage{cmap}                        
+\usepackage[utf8]{inputenc}           
+\usepackage[english, russian]{babel}    
+\usepackage{tikz}
+\usepackage[european,cuteinductors,smartlabels]{circuitikz}
+
+\author{Рахманов М.А.}
+\title{Практическая работа №6}
+
+\begin{document}
+\maketitle
+\centering
+
+
+\begin{circuitikz}
+
+
+
+\draw (2,0) to[C, l_={$C$},*-*] (2,-5);
+
+\draw (2,0) to[short,*-*] (5,0);
+\draw (2,-5) to[short,*-*] (5,-5);
+\draw (5,-1) node[npn] (npn) {}(npn.base)(npn.collector) (npn.emitter);
+\draw ($(npn)+(0,18pt)$) to[short] ($(npn)+(5pt,18pt)$);
+\draw ($(npn)+(0,-18pt)$) to[short] ($(npn)+(5pt,-18pt)$);
+\draw ($(npn)+(5pt,-18pt)$) -- ($(npn)+(5pt,0pt)$);
+\draw ($(npn)+(5pt,0pt)$) -- ($(npn)+(8pt,0pt)$);
+\draw ($(npn)+(5pt,0pt)$) -- ($(npn)+(2pt,0pt)$);
+\draw ($(npn)+(8pt,0pt)$) -- ($(npn)+(5pt,4pt)$);
+\draw ($(npn)+(2pt,0pt)$) -- ($(npn)+(5pt,4pt)$);
+\draw ($(npn)+(5pt,4pt)$) -- ($(npn)+(8pt,4pt)$);
+\draw ($(npn)+(5pt,4pt)$) -- ($(npn)+(2pt,4pt)$);
+\draw ($(npn)+(5pt,4pt)$) -- ($(npn)+(5pt,18pt)$);
+\draw ($(npn)+(0,18pt)$) to [short,-*] (5,0);
+\draw ($(npn)+(0,-18pt)$) to [short,-*] (5,-2.5);
+\draw (5,-4) node[npn] (npn) {}(npn.base) (npn.collector)(npn.emitter);
+\draw ($(npn)+(0,18pt)$) to[short] ($(npn)+(5pt,18pt)$);
+\draw ($(npn)+(0,-18pt)$) to[short] ($(npn)+(5pt,-18pt)$);
+\draw ($(npn)+(5pt,-18pt)$) -- ($(npn)+(5pt,0pt)$);
+\draw ($(npn)+(5pt,0pt)$) -- ($(npn)+(8pt,0pt)$);
+\draw ($(npn)+(5pt,0pt)$) -- ($(npn)+(2pt,0pt)$);
+\draw ($(npn)+(8pt,0pt)$) -- ($(npn)+(5pt,4pt)$);
+\draw ($(npn)+(2pt,0pt)$) -- ($(npn)+(5pt,4pt)$);
+\draw ($(npn)+(5pt,4pt)$) -- ($(npn)+(8pt,4pt)$);
+\draw ($(npn)+(5pt,4pt)$) -- ($(npn)+(2pt,4pt)$);
+\draw ($(npn)+(5pt,4pt)$) -- ($(npn)+(5pt,18pt)$);
+\draw ($(npn)+(0,18pt)$) to [short,-*] (5,-2.5);
+\draw ($(npn)+(0,-18pt)$) to [short,-*] (5,-5);
+\draw (5,0) to[short,*-*] (8,0);
+\draw (5,-5) to[short,*-*] (8,-5);
+\draw (8,-1) node[npn] (npn) {}(npn.base)(npn.collector) (npn.emitter) ;
+\draw ($(npn)+(0,18pt)$) to[short] ($(npn)+(5pt,18pt)$);
+\draw ($(npn)+(0,-18pt)$) to[short] ($(npn)+(5pt,-18pt)$);
+\draw ($(npn)+(5pt,-18pt)$) -- ($(npn)+(5pt,0pt)$);
+\draw ($(npn)+(5pt,0pt)$) -- ($(npn)+(8pt,0pt)$);
+\draw ($(npn)+(5pt,0pt)$) -- ($(npn)+(2pt,0pt)$);
+\draw ($(npn)+(8pt,0pt)$) -- ($(npn)+(5pt,4pt)$);
+\draw ($(npn)+(2pt,0pt)$) -- ($(npn)+(5pt,4pt)$);
+\draw ($(npn)+(5pt,4pt)$) -- ($(npn)+(8pt,4pt)$);
+\draw ($(npn)+(5pt,4pt)$) -- ($(npn)+(2pt,4pt)$);
+\draw ($(npn)+(5pt,4pt)$) -- ($(npn)+(5pt,18pt)$);
+\draw ($(npn)+(0,18pt)$) to [short,-*] (8,0);
+\draw ($(npn)+(0,-18pt)$) to [short,-*] (8,-2);
+\draw (5,0) to[short,*-*] (8,0);
+\draw (5,-5) to[short,*-*] (8,-5);
+\draw (8,-4) node[npn] (npn) {}(npn.base)(npn.collector)(npn.emitter) ;
+\draw ($(npn)+(0,18pt)$) to[short] ($(npn)+(5pt,18pt)$);
+\draw ($(npn)+(0,-18pt)$) to[short] ($(npn)+(5pt,-18pt)$);
+\draw ($(npn)+(5pt,-18pt)$) -- ($(npn)+(5pt,0pt)$);
+\draw ($(npn)+(5pt,0pt)$) -- ($(npn)+(8pt,0pt)$);
+\draw ($(npn)+(5pt,0pt)$) -- ($(npn)+(2pt,0pt)$);
+\draw ($(npn)+(8pt,0pt)$) -- ($(npn)+(5pt,4pt)$);
+\draw ($(npn)+(2pt,0pt)$) -- ($(npn)+(5pt,4pt)$);
+\draw ($(npn)+(5pt,4pt)$) -- ($(npn)+(8pt,4pt)$);
+\draw ($(npn)+(5pt,4pt)$) -- ($(npn)+(2pt,4pt)$);
+\draw ($(npn)+(5pt,4pt)$) -- ($(npn)+(5pt,18pt)$);
+\draw ($(npn)+(0,18pt)$) to [short,-*] (8,-2);
+\draw ($(npn)+(0,-18pt)$) to [short,-*] (8,-5);
+\draw (8,0) to[short,*-*] (11,0);
+\draw (8,-5) to[short,*-*] (11,-5);
+\draw (11,-1) node[npn] (npn) {}(npn.base)(npn.collector)(npn.emitter) ;
+\draw ($(npn)+(0,18pt)$) to[short] ($(npn)+(5pt,18pt)$);
+\draw ($(npn)+(0,-18pt)$) to[short] ($(npn)+(5pt,-18pt)$);
+\draw ($(npn)+(5pt,-18pt)$) -- ($(npn)+(5pt,0pt)$);
+\draw ($(npn)+(5pt,0pt)$) -- ($(npn)+(8pt,0pt)$);
+\draw ($(npn)+(5pt,0pt)$) -- ($(npn)+(2pt,0pt)$);
+\draw ($(npn)+(8pt,0pt)$) -- ($(npn)+(5pt,4pt)$);
+\draw ($(npn)+(2pt,0pt)$) -- ($(npn)+(5pt,4pt)$);
+\draw ($(npn)+(5pt,4pt)$) -- ($(npn)+(8pt,4pt)$);
+\draw ($(npn)+(5pt,4pt)$) -- ($(npn)+(2pt,4pt)$);
+\draw ($(npn)+(5pt,4pt)$) -- ($(npn)+(5pt,18pt)$);
+\draw ($(npn)+(0,18pt)$) to [short,-*] (11,0);
+\draw ($(npn)+(0,-18pt)$) to [short,-*] (11,-3);
+\draw (8,0) to[short,*-*] (11,0);
+\draw (8,-5) to[short,*-*] (11,-5);
+\draw (11,-4) node[npn] (npn) {}(npn.base) (npn.collector) (npn.emitter) ;
+\draw ($(npn)+(0,18pt)$) to[short] ($(npn)+(5pt,18pt)$);
+\draw ($(npn)+(0,-18pt)$) to[short] ($(npn)+(5pt,-18pt)$);
+\draw ($(npn)+(5pt,-18pt)$) -- ($(npn)+(5pt,0pt)$);
+\draw ($(npn)+(5pt,0pt)$) -- ($(npn)+(8pt,0pt)$);
+\draw ($(npn)+(5pt,0pt)$) -- ($(npn)+(2pt,0pt)$);
+\draw ($(npn)+(8pt,0pt)$) -- ($(npn)+(5pt,4pt)$);
+\draw ($(npn)+(2pt,0pt)$) -- ($(npn)+(5pt,4pt)$);
+\draw ($(npn)+(5pt,4pt)$) -- ($(npn)+(8pt,4pt)$);
+\draw ($(npn)+(5pt,4pt)$) -- ($(npn)+(2pt,4pt)$);
+\draw ($(npn)+(5pt,4pt)$) -- ($(npn)+(5pt,18pt)$);
+\draw ($(npn)+(0,18pt)$) to [short,-*] (11,-3);
+\draw ($(npn)+(0,-18pt)$) to [short,-*] (11,-5);
+\draw (11,-3) to [short,*-] (12,-3);
+\draw (8,-2) to [short,*-] (12,-2);
+\draw (5,-2.5) to [short,*-] (12,-2.5);
+\draw (12,-2.5) to [L, l={$L_2$},*-*] (15,-2.5);
+\draw (12,-2) to [short,-*] (12,-1);
+\draw (12,-1) to [L, l={$L_1$},*-*] (15,-1);
+\draw (12,-3) to [short,-*] (12,-4);
+\draw (12,-4) to [L, l={$L_3$},*-*] (15,-4);
+\draw (15,-4) to [short,-] (15,-1);
+
+
+\end{circuitikz}
+
+
+
+\end{document}
+
