@@ -1,0 +1,75 @@
+\documentclass[a4paper,12pt]{scrartcl}
+ \usepackage{mathtext}                  
+  \usepackage{cmap}                    
+\usepackage[utf8]{inputenc}           
+\usepackage[english, russian]{babel}
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=2cm]{geometry} 
+\usepackage{tikz}
+\author{Рахманов М.А.}
+\title{Практическая работа №5} 
+\begin{document}
+\maketitle
+\centering
+\begin{table}[h]
+\caption{\label{tab:canonsummary}Таблица истенности}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{3}{|c|}{Аргумент}& \multicolumn{3}{|c|}{Значение коньюнкции} & Значение дизьюнкции \\
+\hline
+A& B & C & BC & $AB\overline {C}$ &$A\overline{B}C$& $BC+AB\overline {C}+A\overline{B}C$  \\
+\hline
+0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+
+0 & 0 & 1 & 0 & 0 & 0 & 0 \\
+
+0 & 1 & 0 & 0 & 0 & 0 & 0 \\
+
+0 & 1 & 1 & 1 & 0 & 0 & 1 \\
+
+1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+
+1 & 0 & 1 & 0 & 0 & 1 & 1 \\
+
+1 & 1 & 0 & 0 & 1 & 0 & 1 \\
+
+1 & 1 & 1 & 1 & 0 & 0 & 1 \\
+
+\hline
+\end{tabular}
+\end{center}
+\begin{tikzpicture}
+
+
+\draw (0,0) -- (0.7,0) -- (0.7,-0.7) -- (0,-0.7)node[midway, above]{$1$}  -- (0,0);
+
+\draw (0.7,0) -- (1.4,0) -- (1.4,-0.7) -- (0.7,-0.7)node[midway, above]{$1$}  ;
+
+\draw (1.4,0) -- (2.1,0) -- (2.1,-0.7) -- (1.4,-0.7)node[midway, above]{$1$}  ;
+
+\draw (2.1,0) -- (2.8,0) -- (2.8,-0.7) -- (2.1,-0.7)node[midway, above]{$0$}  ;
+
+\draw (0,-0.7) -- (0.7,-0.7) -- (0.7,-1.4) -- (0,-1.4)node[midway, above]{$0$}  -- (0,-0.7);
+
+\draw (0.7,-0.7) -- (1.4,-0.7) -- (1.4,-1.4) -- (0.7,-1.4)node[midway, above]{$1$}  ;
+
+\draw (1.4,-0.7) -- (2.1,-0.7) -- (2.1,-1.4) -- (1.4,-1.4)node[midway, above]{$0$}  ;
+
+\draw (2.1,-0.7) -- (2.8,-0.7) -- (2.8,-1.4) -- (2.1,-1.4)node[midway, above]{$0$}  ;
+
+\draw (0.1,0.1) -- (1.3,0.1)node[midway, above]{$A$} ;
+\draw (1.5,0.1) -- (2.7,0.1)node[midway, above]{$\overline {A}$} ;
+
+\draw (2.9,-0.1) -- (2.9,-0.6)node[midway, right]{$B$} ;
+\draw (2.9,-0.8) -- (2.9,-1.3)node[midway, right]{$\overline {B}$} ;
+
+\draw (0.8,-1.5) -- (2,-1.5)node[midway, below]{$C$} ;
+\draw (2.3,-1.5) -- (2.7,-1.5)node[midway, below]{$\overline {C}$} ;
+\draw (0.1,-1.5) -- (0.6,-1.5)node[midway, below]{$\overline {C}$} ;
+
+
+
+\end{tikzpicture}
+\end{table} 
+
+\end{document}
